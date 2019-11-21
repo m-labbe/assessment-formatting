@@ -33,7 +33,7 @@ class StemText extends Component {
           tabIndex="-1"
           className={styles.textStem}
         >
-          <Markdown source={this.props.stemText}/>
+          <Markdown source={this.props.stemText} language={this.props.language}/>
         </div>
       </div>
     )

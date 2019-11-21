@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import Markdown from '../MarkdownBlock'
 import {
   getAnsweredChoice,
   cleanUpStore,
@@ -175,8 +176,9 @@ class Choice extends React.Component {
         <div
           ref="textChoice"
           onClick={this.handleClick}
-          dangerouslySetInnerHTML={{ __html: this.props.text }}
-        />
+        >
+          <Markdown source={this.props.text} language={this.props.language}/>
+        </div>
       </li>
     )
   }
@@ -204,7 +206,9 @@ class ChoiceKey extends React.Component {
     return (
       <li ref="choiceKey" className={classes}>
         <p className={styles.invisibleHelpText}>{this._renderHelpText()}</p>
-        <div dangerouslySetInnerHTML={{ __html: this.props.text }} />
+        <div>
+          <Markdown source={this.props.text} language={this.props.language}/>
+        </div>
       </li>
     )
   }
@@ -233,7 +237,9 @@ class ChoiceDistractor extends React.Component {
     return (
       <li ref="choiceDistractor" className={classes}>
         <p className={styles.invisibleHelpText}>{this._renderHelpText()}</p>
-        <div dangerouslySetInnerHTML={{ __html: this.props.text }} />
+        <div>
+          <Markdown source={this.props.text} language={this.props.language}/>
+        </div>
       </li>
     )
   }
