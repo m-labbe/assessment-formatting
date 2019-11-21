@@ -1,0 +1,11 @@
+const RESULT_CORRECT = 'Correct'
+const RESULT_INCORRECT = 'Incorrect'
+const RESULT_SKIPPED = 'Skipped'
+const RESULT_TIMED_OUT = 'Timed Out'
+const RESULT_NONE = 'No Result'
+
+export { RESULT_CORRECT,
+  RESULT_INCORRECT,
+  RESULT_SKIPPED,
+  RESULT_TIMED_OUT,
+  RESULT_NONE }

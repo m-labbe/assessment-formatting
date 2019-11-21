@@ -1,0 +1,43 @@
+/*********************
+Question
+**********************/
+
+.skillAssessmentQuestionContainer {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  
+  .skillAssessmentQuestionWrapper {
+    display: block;
+    background-color: #fff;
+    color: #2d2d2d;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 599px) {
+    .skillAssessmentQuestionContainer {
+      margin-top: 50px;
+    }
+  
+    .skillAssessmentQuestionContainer div:nth-of-type(2) > div {
+      background-color: #555 !important;
+    }
+  }
+  
+  @media screen and (min-width: 600px) {
+    .skillAssessmentQuestionContainer {
+      padding: 0 50px;
+    }
+  
+    .skillAssessmentQuestionWrapper {
+      max-width: 70%;
+    }
+
+    .skillAssessmentQuestionWrapper {
+      border-radius: 5px;
+    }
+  }
+  

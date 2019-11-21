@@ -1,0 +1,69 @@
+.assessmentDetails {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.17;
+}
+
+.contextLink a {
+  color: #f96816;
+}
+
+.contextLink a:hover,
+.contextLink a:focus {
+  color: #ff7b39;
+  text-decoration: underline;
+}
+
+/*******************
+ItemHeader
+********************/
+.itemHeaderContent {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px 5px 0 0;
+  background: #f2f2f2;
+  padding: 0 20px;
+}
+.itemHeaderTitle {
+  font-size: 14px;
+}
+.itemHeaderTitle,
+.itemHeaderProgress {
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+  color: #555555;
+}
+
+.itemHeaderProgress {
+  display: none;
+}
+
+.iitemHeaderAssessmentTitle {
+  font-weight: 500;
+}
+
+.itemHeaderProgress {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .itemHeaderContent {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .itemHeaderTitle {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .itemHeaderProgress {
+    display: inline-block;
+  }
+}

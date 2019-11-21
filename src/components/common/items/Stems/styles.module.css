@@ -1,0 +1,148 @@
+/**********************
+StemText
+***********************/
+.stemTextWrapper {
+  width: 100%;
+}
+
+.textStem {
+  margin: 0;
+  /**
+    Why are we using outline: none here?
+    A learner cannot interact with the stem text (aka, the "Question")
+    it is not clickable, so when tabbing through the content
+    there should not be an outline for accessibility reasons.
+    PLEASE do not use this class on an interactive element. [MJ]
+  **/
+  outline: none;
+  width: 100%;
+}
+
+.textStem strong {
+  font-weight: 500;
+}
+
+.textStem p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  margin: 0;
+  color: #222222;
+}
+
+@media screen and (min-width: 1024px) {
+  .textStem p {
+    font-size: 24px;
+  }
+}
+
+.textStem p code {
+  margin: 0;
+}
+
+.textStem pre,
+.textStem code {
+  font-size: 14px;
+  padding: 2px 6px;
+  color: #555555;
+  background-color: #f2f2f2;
+  white-space: pre-wrap;
+  border-radius: 2px;
+}
+@media screen and (min-width: 1024px) {
+  .textStem pre,
+  .textStem code {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+}
+
+.textStem pre {
+  width: 100%;
+  margin: 5px 0;
+  word-wrap: break-word;
+}
+
+.textStem ul,
+.textStem ol {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.textStem ul li,
+.textStem ol li {
+  position: relative;
+}
+
+.textStem ol {
+  margin-left: 50px;
+}
+
+.textStem ul {
+  margin-left: 10px;
+  list-style: none;
+  list-style-position: inside;
+}
+
+/* TODO - Fix these encoded images to be proper url references */
+.textStem ul li {
+  padding-left: 15px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAACxJREFUCB1jPH369FZGRkYvBij4////NiZkAZA4iM8EU4FMYxcEmYGsCsQHABaVDyDBKPrRAAAAAElFTkSuQmCC)
+    no-repeat left center;
+  background-size: 5px 5px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .textStem ul li {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAEhJREFUGBljPH36tBcDA8NMRkZGGSCNAf7///8EKJjOCFT4GJcimC6QYiZCikCKQWqYYLoI0UNCITSc8PoFHDxAFen4FEPl0gFoXx+S+FDmugAAAABJRU5ErkJggg==)
+      no-repeat left center;
+    background-size: 5px 5px;
+  }
+}
+
+/********************
+Stem Image
+*********************/
+.stemImageContainerImageLoading {
+  height: 350px;
+  background: #f2f2f2;
+  position: relative;
+}
+
+.stemImageImageLoading {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  height: 10em;
+  margin-top: -5em;
+}
+
+.stemImageImageLoading p {
+  color: #555555;
+  font-size: 20px;
+  margin: 45px 0 0 42%;
+  font-weight: 300;
+}
+
+.stemImageImageLoading p:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  animation: ellipsis steps(4, end) 900ms infinite;
+  content: '\2026';
+  /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 18px;
+  }
+}
+
+.stemImageContainerImageBroken {
+  height: 350px;
+  background: #f2f2f2;
+  text-align: center;
+  position: relative;
+}
